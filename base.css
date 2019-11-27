@@ -1,0 +1,256 @@
+html {
+    font-size: 16px;
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    height: 100%;
+    display: flex;
+    place-content: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.button {
+    margin-left: 3%;
+    width: 2rem;
+    cursor: pointer;
+}
+
+.button--inactive {
+    opacity: 0.2;
+}
+
+.button img {
+    width: 60%;
+}
+
+.ensemble_carte {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.conteneur_carte {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25rem;
+}
+
+.box {
+    width: 12rem;
+    height: 20rem;
+    box-shadow: 0 0 2rem 0 #888888;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.box:nth-child(2n) {
+    transform: scale(0.85);
+    z-index: -1;
+}
+
+.box:nth-child(2) {
+    left: 5%;
+}
+
+.box:nth-child(4) {
+    left: -5%;
+}
+
+.box:nth-child(4n + 1) {
+    transform: scale(0.75);
+    z-index: -2;
+}
+
+.box:nth-child(1) {
+    left: 15%;
+}
+
+.box:nth-child(5) {
+    left: -15%;
+}
+
+.box_cacher {
+    display: none;
+}
+
+.vers_la_gauche {
+    animation: sortie_gauche 0.5s ease-in-out;
+}
+
+.vers_la_droite {
+    animation: sortie_droite 0.5s ease-in-out;
+}
+
+.vers-position5-gauche {
+    animation: versP5gauche 0.5s ease-in-out;
+}
+
+.vers-position4-gauche {
+    animation: versP4gauche 0.5s ease-in-out;
+}
+
+.vers-position3-gauche {
+    animation: versP3gauche 0.5s ease-in-out;
+}
+
+.vers-position2-gauche {
+    animation: versP2gauche 0.5s ease-in-out;
+}
+
+.vers-position1-gauche{
+    animation: versP1gauche 0.5s ease-in-out;
+}
+
+.vers-position5-droite{
+    animation: versP5droite 0.5s ease-in-out;
+}
+.vers-position4-droite{
+    animation: versP4droite 0.5s ease-in-out;
+}
+.vers-position3-droite{
+    animation: versP3droite 0.5s ease-in-out;
+}
+.vers-position2-droite{
+    animation: versP2droite 0.5s ease-in-out;
+}
+.vers-position1-droite{
+    animation: versP1droite 0.5s ease-in-out;
+}
+
+@keyframes sortie_gauche {
+    0% {
+        transform: scale(0.75) translateX(0%);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(0.5) translateX(-150%);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(0.25) translateX(0%);
+        opacity: 0;
+    }
+}
+
+@keyframes sortie_droite {
+    0% {
+        transform: scale(0.75) translateX(0%);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(0.5) translateX(150%);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(0.25) translateX(0%);
+        opacity: 0;
+    }
+}
+
+
+@keyframes versP5gauche {
+    from {
+        transform: scale(0.75) translateX(100%);
+    }
+    to {
+        transform: scale(0.75) translateX(0);
+    }
+}
+
+@keyframes versP4gauche {
+    from {
+        transform: scale(0.75) translateX(100%);
+    }
+    to {
+        transform: scale(0.85) translateX(0);
+    }
+}
+
+@keyframes versP3gauche {
+    from {
+        transform: scale(0.85) translateX(100%);
+    }
+    to {
+        transform: scale(1) translateX(0);
+    }
+}
+
+@keyframes versP2gauche {
+    from {
+        transform: scale(1) translateX(100%);
+    }
+    to {
+        transform: scale(0.85) translateX(0);
+    }
+}
+
+@keyframes versP1gauche {
+    from {
+        transform: scale(0.85) translateX(100%);
+    }
+    to {
+        transform: scale(0.75) translateX(0);
+    }
+}
+
+
+@keyframes versP1droite {
+    from {
+        transform: scale(0.75) translateX(-100%);
+    }
+    to {
+        transform: scale(0.75) translateX(0);
+    }
+}
+
+@keyframes versP2droite {
+    from {
+        transform: scale(0.75) translateX(-100%);
+    }
+    to {
+        transform: scale(0.85) translateX(0);
+    }
+}
+
+@keyframes versP3droite {
+    from {
+        transform: scale(0.85) translateX(-100%);
+    }
+    to {
+        transform: scale(1) translateX(0);
+    }
+}
+
+@keyframes versP4droite {
+    from {
+        transform: scale(1) translateX(-100%);
+    }
+    to {
+        transform: scale(0.85) translateX(0);
+    }
+}
+
+@keyframes versP5droite {
+    from {
+        transform: scale(0.85) translateX(-100%);
+    }
+    to {
+        transform: scale(0.75) translateX(0);
+    }
+}
