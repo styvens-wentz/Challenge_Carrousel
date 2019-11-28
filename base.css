@@ -59,6 +59,11 @@ body {
     position: relative;
 }
 
+.box:hover {
+    width: 15.6rem;
+    height: 26rem;
+}
+
 .box:nth-child(2n) {
     transform: scale(0.85);
     z-index: -1;
